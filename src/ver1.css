@@ -1,0 +1,548 @@
+:root{
+    --primary : #000000;
+    --secondary : rgba(0, 0, 0, 0.75);
+    --tertiary : rgba(0, 0, 0, 0.5);
+    --quaternary : rgba(0, 0, 0, 0.25);
+    --kakaopay : #FEE500;
+    /* --color1 : #808080; */
+    --color2 : #4b0000;
+    --color3 : #7d0000;
+    --color4 : rgb(200, 100, 100);
+    --color5 : rgba(200, 100, 100, 0.5);
+    --color6 : rgba(200, 100, 100, 0.25);
+    --color7 : rgba(200, 100, 100, 0.05);
+    /* --color6 : rgba(125, 0, 0, 0.25); */
+    /* --color7 : rgba(125, 0, 0, 0.05); */
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard-Regular';
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container {
+    margin: 0 5vw;
+    width: 90vw;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 3s;
+    transition-delay: 0.5s;
+    font-size: 5px;
+}
+
+.font5 {
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+.font4 {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.font3 {
+    font-size: 3em;
+}
+
+.font2 {
+    font-size: 2.5em;
+}
+
+.non-bold {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.line {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.space1 {
+    letter-spacing: 0.75em;
+}
+
+.space2 {
+    letter-spacing: 0.5em;
+}
+
+.color1 {
+    color: var(--secondary);
+}
+
+.color2 {
+    color: var(--color2);
+}
+
+.color3 {
+    color: var(--color3);
+}
+
+.color4 {
+    color: var(--color4);
+}
+
+.color5 {
+    color: var(--color5);
+}
+
+.margin1 {
+    width: 100%;
+    height: 25em;
+    /* height: 30vw; */
+    /* background-color: aqua; */
+}
+
+.margin2 {
+    width: 100%;
+    /* height: 20vw; */
+    height: 17.25em;
+    /* background-color: aquamarine; */
+
+}
+
+.margin3 {
+    width: 100%;
+    /* height: 10vw; */
+    height: 8.75em;
+    /* background-color: violet; */
+}
+
+.margin4 {
+    width: 100%;
+    /* height: 5vw; */
+    height: 4.25em;
+    /* background-color: tomato; */
+}
+
+.margin5 {
+    width: 100%;
+    /* height: 3vw; */
+    height: 2.5em;
+    /* background-color: tan; */
+}
+
+.margin6 {
+    width: 100%;
+    height: 1.5vw;
+    /* background-color: yellow; */
+    height: 0.45em;
+}
+
+.margin7 {
+    width: 100%;
+    height: 5vw;
+    /* background-color: yellowgreen; */
+}
+
+.canvas-container{
+    background-image: url('../public/img/gallery/1.jpg');
+    background-size: cover;
+    aspect-ratio: 2454 / 3474;
+    width: 100%;
+    position: relative;
+}
+.middle-container{
+    background-image: url('../public/img/gallery/2.jpg');
+    background-size: cover;
+    aspect-ratio: 2628 / 3468;
+    width: 100%;
+    /* position: relative; */
+}
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 400px;
+}
+
+.phone-btn {
+    width: 47.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+    background-color: inherit;
+    padding: 3.5% 0%;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+.calendar-background{
+    width: 100vw;
+    background-color: var(--color7);
+    display: flex;
+    justify-content: center;
+}
+.calendar-container {
+    width: 90%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr {
+    background-color: var(--color6);
+    /* color: #353535; */
+    width: 80%;
+    height: 1px;
+}
+
+.hr2 {
+    background-color: var(--color6);
+    /* color: #353535; */
+    width: 80%;
+    height: 1px;
+}
+
+.calendar-container table {
+    width: 80%;
+    /* max-width: 384px; */
+}
+thead, tbody, tr{
+    width: 100%;
+}
+.calendar-container table tr {
+    text-align: center;
+}
+
+.calendar-container table tr td:first-child {
+    color: var(--color4);
+}
+
+.calendar-container table tr td {
+    width: calc(100% / 7);
+}
+.ratio-item{
+    padding: calc(80% / 18) calc(80% / 21);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.date {
+    background-color: var(--color5);
+    border-radius: 50%;
+    font-weight: bold;
+}
+.date span{
+    color: white;
+}
+
+.count-container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-item {
+    background-color: var(--color5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    max-width: 120px;
+}
+
+.count-item span {
+    color: white;
+    font-weight: bold;
+}
+
+.count-item span:first-child {
+    font-size: 3em;
+}
+
+.count-item span:last-child {
+    font-size: 2.5em;
+}
+
+.gallery-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 3px 1%;
+}
+
+.gallery-item {
+    width: calc(98% / 3);
+    aspect-ratio: 1 / 1;
+    max-width: 160px;
+    background-color: var(--color7);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.gallery-item::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+.gallery-img {
+    width: 100%;
+    object-fit: cover;
+}
+.gallery-button{
+    width: 50%;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 15px;
+    margin: 0.45em 25% 0 25%;
+    /* margin-top: 0.45em; */
+    padding: 0.45em 0;
+    background-color: inherit;
+    /* background-color: var(--quaternary); */
+}
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--tertiary);
+}
+.modal-container.open{
+    animation: fadeIn 0.25s;
+}
+.modal-container.close{
+    animation: fadeOut 0.25s;
+}
+.modal-content {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+#__react-kakao-maps-sdk___Map{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.transport-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.transport-container .icon {
+    background-color: var(--color7);
+    border-radius: 50%;
+    padding: 2.5%;
+    width: 12.5%;
+}
+
+.transport-container>div {
+    width: 80%;
+}
+
+.account-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.account-button {
+    /* border: 1px solid rgb(125, 0, 0, 0.25); */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 480px;
+    margin: 0 10%;
+}
+
+.account-button input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.account-title {
+    background-color: var(--color7);
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    padding: 0 10%;
+}
+
+.account-title::after {
+    content: "\276F";
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.account-content {
+    /* background-color: rgba(125, 0, 0, 0.05); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 480px;
+
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 3s ease-in-out; */
+    transition: all 0.25s;
+}
+
+.copy-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-button input:checked~.account-content {
+    max-height: 50vw;
+}
+
+.account-button input:checked+.account-title::after {
+    transform: rotate(270deg);
+}
+.copy-container button a{
+    /* color: black; */
+    color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-container button {
+    border: none;
+    width: 30%;
+    max-width: 60px;
+    aspect-ratio: 121 / 50;
+    border: 1px solid var(--secondary);
+    background-color: inherit;
+    border-radius: 5px;
+}
+
+.account-content :nth-child(5) button {
+    background-color: var(--kakaopay);
+    border: none;
+}
+
+.account-content :nth-child(12) button {
+    background-color: var(--kakaopay);
+    border: none;
+}
+.account-content button img {
+    width: 75%;
+}
+
+.ending-container{
+    background-image: url('../public/img/gallery/6.jpg');
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: 0% 90%;
+    background-color: red;
+}
+.ending-container>span{
+    background-color: var(--tertiary);
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.gallery-item:hover{
+    cursor: pointer;
+}
+.modal-content:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.icon{
+    width: 10%;
+}
